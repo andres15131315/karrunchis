@@ -4,22 +4,31 @@
   box-sizing:border-box;
 }
 
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
 body{
   background:black;
   color:white;
   font-family:Arial, Helvetica, sans-serif;
-  overflow-x:hidden;
+  position:relative;
 }
 
 /* FONDO */
 
 .stars{
   position:fixed;
+  inset:0;
   width:100%;
   height:100%;
   background:url("https://i.imgur.com/YKY28eT.png");
   animation:starsMove 120s linear infinite;
   z-index:-5;
+  background-size:cover;
 }
 
 @keyframes starsMove{
@@ -34,6 +43,14 @@ body{
 
 /* ESTRELLAS FUGACES */
 
+.shooting-stars{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  z-index:-4;
+  pointer-events:none;
+}
+
 .shooting-stars::before,
 .shooting-stars::after{
   content:"";
@@ -44,20 +61,25 @@ body{
   animation:shoot 4s linear infinite;
 }
 
+.shooting-stars::before{
+  top:100px;
+  left:-250px;
+}
+
 .shooting-stars::after{
   top:300px;
-  left:50%;
+  left:-250px;
   animation-delay:2s;
 }
 
 @keyframes shoot{
   from{
-    transform:translate(-200px,-200px) rotate(45deg);
+    transform:translate(0,0) rotate(45deg);
     opacity:1;
   }
 
   to{
-    transform:translate(1200px,1200px) rotate(45deg);
+    transform:translate(800px,800px) rotate(45deg);
     opacity:0;
   }
 }
@@ -68,6 +90,8 @@ body{
   width:90%;
   max-width:1200px;
   margin:auto;
+  position:relative;
+  z-index:2;
 }
 
 /* HERO */
@@ -263,6 +287,10 @@ body{
 
 @media(max-width:768px){
 
+  .hero{
+    padding-top:60px;
+  }
+
   .hero h1{
     font-size:50px;
   }
@@ -274,15 +302,73 @@ body{
   .planet{
     width:180px;
     height:180px;
+    animation:none;
+  }
+
+  .orbit{
+    width:250px;
+    height:250px;
+  }
+
+  .cards{
+    margin-top:80px;
+  }
+
+  .card{
+    font-size:18px;
+    padding:25px;
+  }
+
+  .time h2{
+    font-size:35px;
+  }
+
+  #contador{
+    font-size:25px;
+  }
+
+  .gallery h2{
+    font-size:35px;
   }
 
   .photos img{
     width:100%;
+    max-width:100%;
     height:300px;
   }
 
   .letter{
     padding:30px;
+    border-radius:25px;
+  }
+
+  .letter h2{
+    font-size:35px;
+  }
+
+  .letter p{
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .final button{
+    width:100%;
+    font-size:20px;
+    padding:18px;
+  }
+
+  #message{
+    font-size:22px;
+  }
+
+  /* QUITAR EFECTOS QUE HACEN MOVER LA PAGINA */
+
+  .stars{
+    animation:none;
+  }
+
+  .shooting-stars{
+    display:none;
   }
 
 }
