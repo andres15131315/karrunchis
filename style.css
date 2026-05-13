@@ -1,0 +1,267 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:black;
+  color:white;
+  font-family:Arial, Helvetica, sans-serif;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+/* ESTRELLAS */
+
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(white 1px, transparent 1px);
+  background-size:40px 40px;
+  animation:moveStars 100s linear infinite;
+  z-index:-5;
+}
+
+@keyframes moveStars{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-1000px);
+  }
+}
+
+/* NEBULOSAS */
+
+.nebula{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(100px);
+  z-index:-4;
+}
+
+.nebula1{
+  width:400px;
+  height:400px;
+  background:#ff00aa;
+  top:-100px;
+  left:-100px;
+  opacity:0.3;
+}
+
+.nebula2{
+  width:500px;
+  height:500px;
+  background:#6a00ff;
+  bottom:-200px;
+  right:-100px;
+  opacity:0.3;
+}
+
+.nebula3{
+  width:300px;
+  height:300px;
+  background:#0099ff;
+  top:40%;
+  left:30%;
+  opacity:0.2;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:40px 0;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding-top:50px;
+}
+
+.hero h1{
+  font-size:70px;
+  background:linear-gradient(to right,#ff66c4,#b266ff,#66ccff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:22px;
+  color:#ddd;
+}
+
+/* PLANETA */
+
+.planet-section{
+  display:flex;
+  justify-content:center;
+  margin-top:80px;
+}
+
+.planet{
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  background:linear-gradient(45deg,#ff00aa,#7b2cff,#00bfff);
+  animation:spin 15s linear infinite;
+  box-shadow:0 0 60px #ff00aa;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* CARDS */
+
+.cards{
+  margin-top:100px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.2);
+  padding:30px;
+  border-radius:25px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
+  font-size:18px;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 30px rgba(255,0,170,0.5);
+}
+
+/* CARTA */
+
+.letter{
+  margin-top:120px;
+  background:rgba(255,255,255,0.08);
+  padding:50px;
+  border-radius:40px;
+  border:1px solid rgba(255,255,255,0.2);
+  backdrop-filter:blur(15px);
+}
+
+.letter h2{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:40px;
+  color:#ff99dd;
+}
+
+.letter p{
+  margin-bottom:25px;
+  line-height:2;
+  color:#eee;
+  font-size:20px;
+}
+
+.letter h3{
+  margin-top:50px;
+  text-align:right;
+  color:#ff99dd;
+}
+
+/* STATS */
+
+.stats{
+  margin-top:100px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.stat-box{
+  width:250px;
+  background:rgba(255,255,255,0.08);
+  padding:40px;
+  border-radius:30px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+.stat-box span{
+  font-size:60px;
+  font-weight:bold;
+  color:#ff66c4;
+}
+
+.stat-box p{
+  margin-top:15px;
+  color:#ddd;
+}
+
+/* BOTON */
+
+.final{
+  margin-top:120px;
+  text-align:center;
+  padding-bottom:100px;
+}
+
+.final button{
+  padding:20px 50px;
+  border:none;
+  border-radius:50px;
+  font-size:22px;
+  cursor:pointer;
+  background:linear-gradient(to right,#ff00aa,#7b2cff,#00bfff);
+  color:white;
+  transition:0.4s;
+  box-shadow:0 0 30px rgba(255,0,170,0.5);
+}
+
+.final button:hover{
+  transform:scale(1.1);
+}
+
+#message{
+  margin-top:40px;
+  font-size:28px;
+  color:#ff99dd;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:50px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  .planet{
+    width:180px;
+    height:180px;
+  }
+
+  .letter{
+    padding:30px;
+  }
+
+  .letter h2{
+    font-size:35px;
+  }
+
+}

@@ -1,271 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carta para mi novia 💖</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Universo ❤️</title>
 
-<style>
-* { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    font-family: 'Comic Sans MS', cursive;
-    background: linear-gradient(to bottom, #0b0c2a, #1a1c4a);
-    text-align: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/* 🌌 ESTRELLAS */
-.stars {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    animation: twinkle 2s infinite alternate;
-}
-
-@keyframes twinkle {
-    from { opacity: 0.2; }
-    to { opacity: 1; }
-}
-
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-}
-
-h1 {
-    color: #ff4d6d;
-    font-size: 2.2em;
-    margin-bottom: 10px;
-}
-
-.snoopy {
-    width: 140px;
-    margin: 10px auto;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.4s ease;
-}
-
-.snoopy:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-button {
-    padding: 12px 22px;
-    border: none;
-    border-radius: 30px;
-    background: #ff4d6d;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
-}
-
-button:hover {
-    background: #ff1e4d;
-    transform: scale(1.05);
-}
-
-.letter {
-    background: #ffffff;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    display: none;
-    animation: fadeIn 1s ease forwards;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);} 
-    to {opacity: 1; transform: translateY(0);} 
-}
-
-.heart {
-    position: fixed;
-    bottom: 0;
-    font-size: 18px;
-    animation: floatUp 3s linear forwards;
-}
-
-@keyframes floatUp {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
-}
-
-/* 🌸 FLORES */
-.flores {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 30px;
-    animation: flotar 3s ease-in-out infinite;
-}
-.flore {
-    position: fixed;
-    bottom: 10px;
-    left: 10px; /* 👈 aquí el cambio */
-    font-size: 30px;
-    animation: flotar 3s ease-in-out infinite;
-}
-
-@keyframes flotar {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-/* 🎀 HELLO KITTY */
-.kitty {
-    position: fixed;
-    width: 80px;
-    animation: bounce 3s infinite;
-}
-
-.kitty1 { top: 10px; left: 10px; }
-.kitty2 { top: 10px; right: 10px; }
-
-@keyframes bounce {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-@media (max-width: 480px) {
-    h1 { font-size: 1.8em; }
-    .letter { font-size: 14px; }
-    .kitty { width: 60px; }
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- 🌌 FONDO DE ESTRELLAS -->
-<div class="stars" id="stars"></div>
+  <!-- Estrellas -->
+  <div class="stars"></div>
 
-<!-- 🎀 HELLO KITTY -->
-<img src="https://www.gratistodo.com/wp-content/uploads/2016/02/Imagenes-de-Hello-Kitty-2.png" class="kitty kitty1">
-<img src="https://www.gratistodo.com/wp-content/uploads/2016/02/Imagenes-de-Hello-Kitty-2.png" class="kitty kitty2">
+  <!-- Nebulosas -->
+  <div class="nebula nebula1"></div>
+  <div class="nebula nebula2"></div>
+  <div class="nebula nebula3"></div>
 
-<!-- 🌸 FLORES -->
-<div class="flores">🌸🌷🌼</div>
-<div class="flore">🌸🌷🌼</div>
-<div class="container">
-    <h1>Bajo este cielo, pienso en ti mi amor 🌙💕</h1>
+  <main class="container">
 
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/53/Snoopy_Peanuts.png" class="snoopy" onclick="mostrarCarta()">
+    <!-- Portada -->
+    <section class="hero">
+      <h1>Para Ti ❤️</h1>
+      <p>
+        Entre millones de estrellas, tú eres la más hermosa del universo ✨
+      </p>
+    </section>
 
-    <button onclick="mostrarCarta()">Abrir carta 💌</button>
+    <!-- Planeta -->
+    <section class="planet-section">
+      <div class="planet"></div>
+    </section>
 
-    <div class="letter" id="carta">
-        <p>
-            Hola mi amor 💖,<br><br>
-            Con ayuda de snoopy decidi hacerte este detalle
-            Hoy quería hacer algo especial para ti...<br><br>
-            Desde que llegaste a mi vida todo es más bonito 💕<br><br>
-            Me encanta tu forma de ser y cada momento contigo 😍<br><br>
-            Te amo muchísimo ❤️<br><br>
-            Con todo mi amor,<br>
-            Andrés 💕
-        </p>
-    </div>
-</div>
+    <!-- Frases -->
+    <section class="cards">
 
-<!-- 🎵 MÚSICA -->
-<audio id="musica" preload="auto">
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
-</audio>
+      <div class="card">
+        Eres mi lugar favorito en todo el universo 🌌
+      </div>
 
-<script>
-// 💌 Mostrar carta + música
-function mostrarCarta() {
-    const carta = document.getElementById('carta');
-    carta.style.display = 'block';
+      <div class="card">
+        Tus ojos brillan más que cualquier estrella ✨
+      </div>
 
-    const musica = document.getElementById('musica');
+      <div class="card">
+        Contigo quiero todas mis vidas ❤️
+      </div>
 
-    // 🔥 FORZAR reproducción correctamente
-    musica.currentTime = 0;
-    musica.volume = 0.4;
+      <div class="card">
+        Tú haces bonito mi mundo 🌍
+      </div>
 
-    const playPromise = musica.play();
+      <div class="card">
+        Mi paz favorita eres tú 💖
+      </div>
 
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {
-            console.log("El navegador bloqueó el audio 😢");
-        });
-    }
+      <div class="card">
+        Si el universo acaba, quiero estar abrazándote 🫂
+      </div>
 
-    crearCorazones();
-}
+    </section>
 
-// 💖 Corazones + Karina
-function crearCorazones() {
-    const elementos = ['❤️', '💖', '💕', 'Karina 💕'];
+    <!-- Carta -->
+    <section class="letter">
 
-    for (let i = 0; i < 20; i++) {
-        setTimeout(() => {
+      <h2>Una Carta Para Ti 💌</h2>
 
-            let item = document.createElement('div');
-            item.className = 'heart';
+      <p>
+        Mi amor...
+      </p>
 
-            const random = Math.floor(Math.random() * elementos.length);
-            item.innerHTML = elementos[random];
+      <p>
+        Desde que llegaste a mi vida, todo cambió. Los días tienen más color, las noches más brillo y mi corazón más felicidad.
+      </p>
 
-            item.style.left = Math.random() * 100 + 'vw';
-            item.style.fontSize = (Math.random() * 10 + 15) + 'px';
+      <p>
+        Eres esa persona que apareció sin avisar y terminó convirtiéndose en lo más importante de mi universo.
+      </p>
 
-            if (elementos[random].includes('Karina')) {
-                item.style.color = '#ff4d6d';
-                item.style.fontWeight = 'bold';
-            }
+      <p>
+        Amo tu sonrisa, tu forma de hablar, tu mirada y hasta los pequeños detalles que te hacen única.
+      </p>
 
-            document.body.appendChild(item);
+      <p>
+        Gracias por existir, por quedarte y por hacerme sentir amado de una forma que jamás imaginé.
+      </p>
 
-            setTimeout(() => {
-                item.remove();
-            }, 3000);
+      <p>
+        Si algún día dudas de cuánto te amo, mira el cielo de noche… porque ni todas las estrellas juntas podrían explicar lo que siento por ti.
+      </p>
 
-        }, i * 200);
-    }
-}
+      <h3>Con todo mi corazón ❤️</h3>
 
-// ✨ Estrellas
-function crearEstrellas() {
-    const starsContainer = document.getElementById('stars');
+    </section>
 
-    for (let i = 0; i < 120; i++) {
-        let star = document.createElement('div');
-        star.className = 'star';
+    <!-- Contadores -->
+    <section class="stats">
 
-        star.style.top = Math.random() * 100 + 'vh';
-        star.style.left = Math.random() * 100 + 'vw';
-        star.style.animationDuration = (Math.random() * 2 + 1) + 's';
+      <div class="stat-box">
+        <span>∞</span>
+        <p>Besos que quiero darte</p>
+      </div>
 
-        starsContainer.appendChild(star);
-    }
-}
+      <div class="stat-box">
+        <span>24/7</span>
+        <p>Pensando en ti</p>
+      </div>
 
-crearEstrellas();
-</script>
+      <div class="stat-box">
+        <span>1000%</span>
+        <p>Nivel de amor</p>
+      </div>
+
+    </section>
+
+    <!-- Botón -->
+    <section class="final">
+
+      <button id="loveBtn">
+        Toca Aquí ❤️
+      </button>
+
+      <p id="message"></p>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
