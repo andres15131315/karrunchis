@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mi Universo ❤️</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Estrellas -->
+  <!-- ESTRELLAS -->
   <div class="stars"></div>
 
-  <!-- Nebulosas -->
-  <div class="nebula nebula1"></div>
-  <div class="nebula nebula2"></div>
-  <div class="nebula nebula3"></div>
+  <!-- ESTRELLAS FUGACES -->
+  <div class="shooting-stars"></div>
+
+  <!-- CORAZONES -->
+  <div class="hearts"></div>
+
+  <!-- MUSICA -->
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
 
   <main class="container">
 
-    <!-- Portada -->
+    <!-- HERO -->
     <section class="hero">
-      <h1>Para Ti ❤️</h1>
+
+      <h1>Mi Universo ❤️</h1>
+
       <p>
-        Entre millones de estrellas, tú eres la más hermosa del universo ✨
+        Entre millones de estrellas...
+        siempre te elegiría a ti ✨
       </p>
+
     </section>
 
-    <!-- Planeta -->
+    <!-- PLANETA -->
     <section class="planet-section">
+
+      <div class="orbit"></div>
       <div class="planet"></div>
+
     </section>
 
-    <!-- Frases -->
+    <!-- FRASES -->
     <section class="cards">
 
-      <div class="card">
-        Eres mi lugar favorito en todo el universo 🌌
-      </div>
+      <div class="card">Eres mi lugar favorito 🌌</div>
+      <div class="card">Tus ojos son mis estrellas ✨</div>
+      <div class="card">Te amo infinitamente amor ❤️</div>
+      <div class="card">Mi paz favorita eres tú mi karrunchis  💖</div>
+      <div class="card">Tú haces bonito mi mundo 🌍</div>
+      <div class="card">Quiero todas mis vidas contigo 💫</div>
 
-      <div class="card">
-        Tus ojos brillan más que cualquier estrella ✨
-      </div>
+    </section>
 
-      <div class="card">
-        Contigo quiero todas mis vidas ❤️
-      </div>
+    <!-- CONTADOR -->
+    <section class="time">
 
-      <div class="card">
-        Tú haces bonito mi mundo 🌍
-      </div>
+      <h2>Tiempo amándote ⏳</h2>
 
-      <div class="card">
-        Mi paz favorita eres tú 💖
-      </div>
+      <div id="contador"></div>
 
-      <div class="card">
-        Si el universo acaba, quiero estar abrazándote 🫂
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery">
+
+      <h2>Nuestros Recuerdos 📸</h2>
+
+      <div class="photos">
+
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+
       </div>
 
     </section>
 
-    <!-- Carta -->
+    <!-- CARTA -->
     <section class="letter">
 
       <h2>Una Carta Para Ti 💌</h2>
@@ -71,50 +92,34 @@
       </p>
 
       <p>
-        Desde que llegaste a mi vida, todo cambió. Los días tienen más color, las noches más brillo y mi corazón más felicidad.
+        Desde que llegaste a mi vida todo cambió.
+        Los días tienen más color, las noches más brillo
+        y mi corazón más felicidad.
       </p>
 
       <p>
-        Eres esa persona que apareció sin avisar y terminó convirtiéndose en lo más importante de mi universo.
+        Eres la casualidad más hermosa que me pasó.
       </p>
 
       <p>
-        Amo tu sonrisa, tu forma de hablar, tu mirada y hasta los pequeños detalles que te hacen única.
+        Gracias por hacerme sentir amado,
+        por tu sonrisa,
+        por tus abrazos,
+        y por existir.
       </p>
 
       <p>
-        Gracias por existir, por quedarte y por hacerme sentir amado de una forma que jamás imaginé.
+        Si algún día dudas cuánto te amo,
+        mira el cielo...
+        porque ni todas las estrellas juntas
+        podrían explicar lo que siento por ti ❤️
       </p>
 
-      <p>
-        Si algún día dudas de cuánto te amo, mira el cielo de noche… porque ni todas las estrellas juntas podrían explicar lo que siento por ti.
-      </p>
-
-      <h3>Con todo mi corazón ❤️</h3>
+      <h3>Con todo mi corazón 💖</h3>
 
     </section>
 
-    <!-- Contadores -->
-    <section class="stats">
-
-      <div class="stat-box">
-        <span>∞</span>
-        <p>Besos que quiero darte</p>
-      </div>
-
-      <div class="stat-box">
-        <span>24/7</span>
-        <p>Pensando en ti</p>
-      </div>
-
-      <div class="stat-box">
-        <span>1000%</span>
-        <p>Nivel de amor</p>
-      </div>
-
-    </section>
-
-    <!-- Botón -->
+    <!-- BOTON -->
     <section class="final">
 
       <button id="loveBtn">
